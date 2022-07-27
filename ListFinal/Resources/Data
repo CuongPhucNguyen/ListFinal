@@ -1,0 +1,11 @@
+[
+  {
+    "id":"0",
+    "name":"Stuff",
+    "desc":"desc",
+    "location":"location",
+    "detailedDesc":"detailedDesc",
+    "iconName":"iconName",
+    "iconNameSelected":"iconNameSelected"
+  }
+]
