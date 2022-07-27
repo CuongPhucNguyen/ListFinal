@@ -14,10 +14,10 @@ import CoreLocation
 
 struct StuffObject: Codable, Identifiable {
     var id: Int
-    var name: String
-    var desc: String
-    var location: String
-    var detailedDesc: String
+    var name: String?
+    var desc: String?
+    var location: String?
+    var detailedDesc: String?
     var iconName: String
     var iconNameSelected: String
     
@@ -26,5 +26,10 @@ struct StuffObject: Codable, Identifiable {
     }
     var iconSelected: Image {
         Image(iconNameSelected)
+    }
+    
+    func jsonViewer() -> String {
+        return "\(id) \n \(name) \n \(desc) \n \(location)"
+        
     }
 }

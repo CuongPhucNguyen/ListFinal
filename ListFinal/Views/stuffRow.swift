@@ -19,6 +19,6 @@ struct stuffRow: View {
 //
 //struct stuffRow_Previews: PreviewProvider {
 //    static var previews: some View {
-//        stuffRow(stuff: stuff[0])
+//        stuffRow(stuff: stuffArray[0])
 //    }
 //}

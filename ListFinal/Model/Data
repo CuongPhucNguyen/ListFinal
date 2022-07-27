@@ -1,11 +1,11 @@
 [
   {
-    "id":"0",
+    "id":1,
     "name":"Stuff",
     "desc":"desc",
     "location":"location",
     "detailedDesc":"detailedDesc",
-    "iconName":"iconName",
-    "iconNameSelected":"iconNameSelected"
+    "iconName":"placeholder",
+    "iconNameSelected":"placeholder"
   }
 ]

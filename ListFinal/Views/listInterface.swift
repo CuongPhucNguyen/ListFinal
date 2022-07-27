@@ -40,7 +40,7 @@ struct Stuff: View {
 
 struct Stuff_Previews: PreviewProvider {
     static var previews: some View {
-        Stuff()
+        jsonViewer()
     }
 }
 
@@ -70,4 +70,13 @@ struct Item {
     public var name:String
     public var address: String
     public var  desc: String
+}
+
+
+
+
+struct jsonViewer : View {
+    var body: some View {
+        Text(stuffArray[0].jsonViewer())
+    }
 }

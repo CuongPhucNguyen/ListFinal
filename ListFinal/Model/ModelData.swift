@@ -8,7 +8,7 @@
 import Foundation
 
 
-var stuff = load(filename: "Data.json")
+var stuffArray: [StuffObject] = load(filename: "Data.json")
 
 func load(filename: String) -> [StuffObject] {
     if let file = Bundle.main.url(forResource: filename, withExtension: nil){

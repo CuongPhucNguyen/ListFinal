@@ -160,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				903AC749289141CF00D40385 /* Data.xcdatamodeld */,
-				903AC74B289141CF00D40385 /* Data */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -168,6 +167,7 @@
 		903AC74C289141CF00D40385 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				903AC74B289141CF00D40385 /* Data */,
 				903AC74D289141CF00D40385 /* stuffObject.swift */,
 				903AC74E289141CF00D40385 /* ModelData.swift */,
 			);

@@ -11,7 +11,7 @@ import SwiftUI
 struct ListFinalApp: App {
     var body: some Scene {
         WindowGroup {
-            Stuff()
+            
         }
     }
 }
