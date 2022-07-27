@@ -8,27 +8,21 @@
 import Foundation
 
 
-var stuff: [StuffObject] = load("Data.json")
+var stuff = load(filename: "Data.json")
 
-func load<T:Decodable>(_ filename: String) -> T {
-    let data: Data
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-    else{
-        fatalError("Could not find \(filename) in main bundle.")
+func load(filename: String) -> [StuffObject] {
+    if let file = Bundle.main.url(forResource: filename, withExtension: nil){
+        if let data = try? Data(contentsOf: file){
+            do {
+                let decoder = JSONDecoder()
+                let decoded = try decoder.decode([StuffObject].self, from: data)
+                return decoded
+            } catch let error {
+                fatalError("Failed to decode JSON: \(error)")
+            }
+        }
+    } else {
+        fatalError("Couldn't load \(filename) file")
     }
-    
-    do {
-        data = try Data(contentsOf: file)
-    }
-    catch {
-        fatalError("Could not load \(filename) from main bundle: \n\(error)")
-    }
-    
-    do {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    }
-    catch {
-        fatalError("Could not parse \(filename) as \(T.self): \n\(error)")
-    }
+    return [] as [StuffObject]
 }

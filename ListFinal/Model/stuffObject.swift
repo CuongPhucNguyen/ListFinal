@@ -12,7 +12,7 @@ import CoreLocation
 
 
 
-struct StuffObject: Hashable, Codable, Identifiable {
+struct StuffObject: Codable, Identifiable {
     var id: Int
     var name: String
     var desc: String
